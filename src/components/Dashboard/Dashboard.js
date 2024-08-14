@@ -9,7 +9,7 @@ function Dashboard({ setBannerData }) {
 
   //Handle update function
   const handleUpdate = () => {
-    fetch("http://localhost:8000/api/v1/banner")
+    fetch("https://backend-tuf-task.onrender.com/api/v1/banner")
       .then((response) => response.json())
       .then((data) => {
         const updatedData = {
@@ -19,7 +19,7 @@ function Dashboard({ setBannerData }) {
           link: link.trim() || data.link
         };
 
-        fetch('http://localhost:8000/api/v1/update-banner', {
+        fetch('https://backend-tuf-task.onrender.com/api/v1/update-banner', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
