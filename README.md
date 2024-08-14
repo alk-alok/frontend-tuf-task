@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# TUF Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
 
-## Available Scripts
+This project is a dynamic one-page website built with React. It includes a banner with a controllable visibility feature and a countdown timer. An internal dashboard allows you to manage the banner's content, visibility, timer, and clickable link. The backend is integrated with a MySQL database to store and manage the banner data.
 
-In the project directory, you can run:
+## Project Structure
 
-### `npm start`
+- **client/**: Contains the React frontend.
+  - **public/**: Static files.
+  - **src/**: Source code for React components.
+  - **App.js**: Main React component.
+  - **index.js**: Entry point for React.
+  - **App.css**: Main CSS file for styling.
+  - **index.css**: Global CSS file.
+  - **README.md**: Documentation for the client.
+  
+- **server/**: Contains the backend server.
+  - **index.js**: Entry point for the server.
+  - **.env**: Environment variables for the server.
+  - **banner.sql**: SQL script for database schema and initial data.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- Node.js and npm installed.
+- MySQL server running.
+- Basic knowledge of React and MySQL.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1. **Clone the repository:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```bash
+    git clone https://github.com/alk-alok/tuf-assignment.git
+    cd tuf-assignment
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Client Setup:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    cd client
+    npm install
+    ```
 
-### `npm run eject`
+    - Create a `.env` file in the `client` directory and add any required environment variables.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Server Setup:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```bash
+    cd server
+    npm install
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    - Create a `.env` file in the `server` directory with your database configuration.
+    - Run the `banner.sql` script to set up the database schema and initial data.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. **Start the Development Servers:**
 
-## Learn More
+    - For the client:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+      ```bash
+      cd client
+      npm start
+      ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    - For the server:
 
-### Code Splitting
+      ```bash
+      cd server
+      npm start
+      ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+5. **Visit the Website:**
 
-### Analyzing the Bundle Size
+    Open `http://localhost:3000` in your browser to view the one-page website and interact with the banner and dashboard.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## API Endpoints
 
-### Making a Progressive Web App
+- **GET /api/v1/banner**: Retrieve the current banner data.
+- **POST /api/v1/update-banner**: Update banner data in the database.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For questions or support, please contact [kumaralok47ak@gmail.com](mailto:kumaralok47ak@gmail.com).
