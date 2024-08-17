@@ -9,6 +9,8 @@ This project is a dynamic one-page website built with React. It includes a banne
 - **This code is for frontend, If you want to see the code of the backend then go to another repository- [https://github.com/alk-alok/backend-tuf-task](https://github.com/alk-alok/backend-tuf-task)**
 - **Deployment**: I have deployed frontend at netlify :- [click me](https://66bc8a10d98256872057f348--darling-zuccutto-4b6864.netlify.app/)
 
+  [!Image of frontend](./image.png)
+
 ## Project Structure
 
 - **client/**: Contains the React frontend.
